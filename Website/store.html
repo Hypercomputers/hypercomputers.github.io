@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>store</title>
+<link rel="icon" type="image/x-icon" href="/image/web.ico">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color:#312438;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:-1%;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+            .ben2{
+      background-color: #0089b9;
+  color:black;
+  padding:20px 46px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-style:italic;
+  border-style:solid;
+  border-width:3px;
+  border-color:black;
+  font-size:25px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: -2.8%;
+  margin-top: 4.6%;
+}
+            .ben3{
+      background-color: #0089b9;
+  color:black;
+  padding:21px 46px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-style:italic;
+  border-style:solid;
+  border-width:3px;
+  border-color:black;
+  font-size:25px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: -2.8%;
+  margin-top: 9.83%;
+}
+            .ben4{
+      background-color: #0089b9;
+  color:black;
+  padding:21px 46px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-style:italic;
+  border-style:solid;
+  border-width:3px;
+  border-color:black;
+  font-size:25px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: -2.8%;
+  margin-top: 15.1%;
+}
+            .ben5{
+      background-color: #0089b9;
+  color:black;
+  padding:20px 46px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  font-style:italic;
+  border-style:solid;
+  border-width:3px;
+  border-color:black;
+  font-size:25px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: -2.8%;
+  margin-top: 20.4%;
+}
+.list{
+    margin-left:;
+    margin-top:-10.6%;
+    background-color:white;
+}
+
+        a:hover, a:active {
+  background-color:#444;
+}
+.add_to_cart{
+	margin-top: 10px;
+	width: 100%;
+	height: 40px;
+	border: none;
+	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color: #202020;
+}
+.top {display: block; margin-left: auto; margin-top: -6%; margin-right:auto;}
+.box1{ margin-left:10%; }
+.PC1{margin-left:5%; margin-top:0%;}
+.PC2{margin-left:5%; margin-top:0%;}
+.PC3{margin-left:7%; margin-top:0%;}
+.PC4{margin-left:5%; margin-top:18%;}
+.PC5{margin-left:37%; margin-top:5%;}
+.PC6{margin-left:70%; margin-top:-50%;}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-left:4%;
+  
+  background-color:#bababa;
+  border-color:black;
+  border:solid;
+}
+
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-left:37.5%;
+  margin-top:-42%;
+  background-color:#bababa;
+  border-color:black;
+  border:solid;
+}
+
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-right:5%;
+  margin-top:-42%;
+  background-color:#bababa;
+  border-color:black;
+  border:solid;
+}
+.card4 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-left:4%;
+  margin-top:4%;
+  background-color:#bababa;
+  border-color:black;
+  border:solid;
+}
+.card5 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-left:37.5%;
+  margin-top: -43.5%;
+  background-color:#bababa;
+  border-color:black;
+  border:solid;
+}
+.card6 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-right:5%;
+  margin-top:-43.4%;
+  background-color:#bababa;
+  border-color:black;
+  border:solid;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  height:40px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+a.noborder:hover { 
+border-bottom: none !important;}
+.L {margin-left:71%;
+ margin-top:-7%;}
+ .mid{margin-top:5%;}
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="about_page.html">About</a>
+  <a href="/start_here/index.html">home</a>
+  <a href="legal_stuff.html">legal</a>
+  <a href="contacts_page.html">Contact</a>
+  <a href="/website/shopping_cart.html">cart</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Open menu</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<img src="/images/logo.png" alt="logo" class="L" height="350px">
+<img src="/images/slogen.png" alt="slogen" class="" height="25%" width="30%">
+<div class="card1">
+  <a href="blizzard.html" class="noborder"><img src="/images/pc.png" alt="blizzard" style="width:100%"></a>
+  <h1>blizzard</h1>
+  <p class="price">$1,149.99</p>
+  <p>a mid ranged prebuild for...</p>
+  <p><button class="add_to_cart">Add to Cart</button></p>
+</div>
+<div class="card2">
+  <a href="blizzard_mini.html" class="noborder"><img src="/images/pc2.png" alt="blizzard mini" style="width:99.5%" height="50%"></a>
+  <h1>blizzard mini</h1>
+  <p class="price">$1,300.99</p>
+  <p>a smaller mid ranged prebuild...</p>
+  <p><button class="add_to_cart">Add to Cart</button></p>
+</div>
+<div class="card3">
+  <a href="genesis.html" class="noborder"><img src="/images/pc3.png" alt="genesis" style="width:100%"></a>
+  <h1>genesis</h1>
+  <p class="price">$2,500.99</p>
+  <p>a high end prebuild for...</p>
+  <p><button class="add_to_cart">Add to Cart</button></p>
+</div>
+<div class="card4">
+  <a href="chronos.html" class="noborder"><img src="/images/pc4.png" alt="chronos" style="width:106%"></a>
+  <h1>chronos</h1>
+  <p class="price">$4,000.99</p>
+  <p>our highest end prebuild...</p>
+  <p><button class="add_to_cart">Add to Cart</button></p>
+</div>
+<div class="card5">
+  <a href="creator_pro.html" class="noborder"><img src="/images/pc5.png" alt="creator" style="width:105%"> </a>
+  <h1>creator pc</h1>
+  <p class="price">$2,450.99</p>
+  <p>a prebuild made for...</p>
+  <p><button class="add_to_cart">Add to Cart</button></p>
+</div>
+<div class="card6">
+  <a href="archangel.html" class="noborder"><img src="/images/pc6.png" alt="archangel" style="width:105%"> </a>
+  <h1>archangel</h1>
+  <p class="price">$1,100.99</p>
+  <p>a prebuild for someone on a...</p>
+  <a href="shopping_cart.html"><p><button id="cart6" class="add_to_cart">Add to Cart</button></p></a>
+</div>
+
+</script>
+</body>
+</html>
